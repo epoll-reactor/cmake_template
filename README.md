@@ -9,5 +9,5 @@
 After generating repository:
 
 * settings - pages - source - master, /docs
-* change repository name in GitHub Actions to yours
-* change repository name in Documentation page
+* in README: change repository name in GitHub Actions to yours
+* in README: change repository name in Documentation page
