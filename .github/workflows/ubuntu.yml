@@ -1,0 +1,23 @@
+name: Ubuntu
+
+on:
+  push:
+    branches:
+      - develop
+      - master
+      - release/*
+  pull_request:
+
+jobs:
+  build-ubuntu:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Run CMake
+      run: mkdir build && cd build && cmake .. && cmake --build . --parallel
+
+    - name: Run tests
+      run: cd build && ./tests/tests
